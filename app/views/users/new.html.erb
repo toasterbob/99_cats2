@@ -16,7 +16,10 @@
 
   <input type="submit" value="Create New User">
 
-  <input type = "hidden"
-          name = "authenticity_token"
-          value = "<%= form_authenticity_token %>">
+  <%= auth_token %>
 </form>
+
+<% content_for :footer do %>
+  <p>You are signing up for possibly, maybe, the greatest cat site you
+  will see in the next five minutes.  BELIEVE!</p>
+<% end %>

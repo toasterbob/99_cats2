@@ -17,9 +17,8 @@
   <% else %>
     <form action= "<%=new_session_url %>" method="get">
       <input type="submit" value="Login Page">
-      <input type = "hidden"
-              name = "authenticity_token"
-              value = "<%= form_authenticity_token %>">
+
+      <%= auth_token %>
     </form>
   <% end %>
 
@@ -31,4 +30,11 @@
 <%= yield %>
 
 </body>
+<footer>
+  <br>
+  This site has a lot of stupid cats!  YAY!
+  <br>
+  <br>
+  <%= yield :footer %>
+</footer>
 </html>

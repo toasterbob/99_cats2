@@ -16,7 +16,9 @@
 
   <input type="submit" value="Login">
 
-  <input type = "hidden"
-          name = "authenticity_token"
-          value = "<%= form_authenticity_token %>">
+  <%= auth_token %>
 </form>
+
+<% content_for :footer do %>
+  <p>You are about to login!  This is as good as it gets, people!</p>
+<% end %>
